@@ -1,0 +1,5 @@
+-- Demo user is auto-seeded by backend/app.py on startup:
+-- email: demo@flatmates.app / password: demo1234
+--
+-- Flatmate users are created automatically during CSV import
+-- with membership timelines defined in backend/services/name_utils.py

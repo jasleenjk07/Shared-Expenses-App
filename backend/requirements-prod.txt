@@ -1,0 +1,2 @@
+# Optional for PostgreSQL production deploy
+psycopg2-binary==2.9.9
