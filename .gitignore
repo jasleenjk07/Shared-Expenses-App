@@ -8,3 +8,4 @@ database/*.db
 uploads/
 .DS_Store
 *.egg-info/
+dist/
