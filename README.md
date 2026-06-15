@@ -8,7 +8,11 @@ Built as a software engineering internship assignment: product decisions, relati
 
 ## Live Demo
 
-> **Deployed URL:** *(add after deploying to Render — see [Deployment](#deployment) below)*
+**Deploy in one click:** [Deploy to Render](https://render.com/deploy?repo=https://github.com/jasleenjk07/Shared-Expenses-App)
+
+After deploy completes, your app will be at `https://shared-expenses-app.onrender.com` (or similar). Paste that URL here once live.
+
+**Demo login:** `demo@flatmates.app` / `demo1234`
 
 ---
 
@@ -187,14 +191,31 @@ For PostgreSQL in production, also install `backend/requirements-prod.txt` and s
 
 ## Deployment (Render)
 
-1. Push this repo to GitHub.
-2. Create a new **Web Service** on [Render](https://render.com) and connect the repo.
-3. Render reads [`render.yaml`](render.yaml) automatically, or set manually:
-   - **Build:** `pip install -r backend/requirements.txt && cd frontend && npm install && npm run build`
-   - **Start:** `PYTHONPATH=. gunicorn backend.app:app --bind 0.0.0.0:$PORT`
-4. Add a **PostgreSQL** database and set `DATABASE_URL`.
-5. Set `SECRET_KEY`, `JWT_SECRET_KEY`, and `USD_TO_INR_RATE`.
-6. Paste the public URL above in the [Live Demo](#live-demo) section.
+Code is pushed to GitHub: **https://github.com/jasleenjk07/Shared-Expenses-App**
+
+### Option A — One-click Blueprint (recommended)
+
+1. Open **[Deploy to Render](https://render.com/deploy?repo=https://github.com/jasleenjk07/Shared-Expenses-App)**
+2. Sign in with GitHub and authorize Render
+3. Review the blueprint — it creates:
+   - **Web service** (`shared-expenses-app`) — Flask + React build
+   - **PostgreSQL database** (`shared-expenses-db`) — free tier
+4. Click **Apply** and wait ~5–10 minutes for the first build
+5. Open the service URL when status shows **Live**
+
+### Option B — Manual setup
+
+1. Go to [dashboard.render.com](https://dashboard.render.com) → **New** → **Blueprint**
+2. Connect repo `jasleenjk07/Shared-Expenses-App`
+3. Render reads [`render.yaml`](render.yaml) automatically
+
+### After deployment
+
+- Test health: `https://YOUR-APP.onrender.com/api/health`
+- Login → create group → import `Expenses_Export.csv`
+- Update the [Live Demo](#live-demo) URL in this README
+
+> **Note:** Free tier services spin down after inactivity; first load may take 30–60 seconds.
 
 ---
 
