@@ -8,11 +8,16 @@ Built as a software engineering internship assignment: product decisions, relati
 
 ## Live Demo
 
-**Deploy in one click:** [Deploy to Render](https://render.com/deploy?repo=https://github.com/jasleenjk07/Shared-Expenses-App)
+**App:** https://shared-expenses-app-6xmk.onrender.com
 
-After deploy completes, your app will be at `https://shared-expenses-app.onrender.com` (or similar). Paste that URL here once live.
+| | |
+|---|---|
+| **Login** | `demo@flatmates.app` / `demo1234` |
+| **Health check** | https://shared-expenses-app-6xmk.onrender.com/api/health |
 
-**Demo login:** `demo@flatmates.app` / `demo1234`
+**Quick test:** Login → create group → **Import** tab → upload `Expenses_Export.csv` → check **Balances**.
+
+> Free tier may sleep after inactivity; first load can take 30–60 seconds.
 
 ---
 
